@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+input {
+    /* background-color: #3674B5; */
+    width: 19rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
