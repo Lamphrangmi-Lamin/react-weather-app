@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import SearchBar from './components/SearchBar';
 import "./App.css";
 import WeatherDisplay from './components/WeatherDisplay';
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
 function App() {
   const [city, setCity] = useState('Guwahati');
@@ -24,7 +25,6 @@ function App() {
     setIsLoading(true);
 
     // making fetch request
-    const apiKey = "a409cd74d21e4878b8e30436250103";
     const fetchWeatherData = async () => {
       try {
         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
