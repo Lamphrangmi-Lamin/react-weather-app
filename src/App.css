@@ -2,8 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* font-family: ; */
 }
 
 body {
-    background-color: #578FCA;
+    background-color: #4B164C;
+    color: #F5F5F5;
 }

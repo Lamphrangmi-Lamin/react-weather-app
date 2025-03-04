@@ -1,6 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 function SearchBar({onSearch}) {
   const [city, setCity] = useState('');
   const handleChange = (e) => setCity(e.target.value);
@@ -21,7 +22,9 @@ function SearchBar({onSearch}) {
               value={city}
               onChange={handleChange}
             />
-            <button type="submit">Search</button>
+            <button type="submit">
+              <FaSearch size={18} />
+            </button>
         </form>
     )
 }

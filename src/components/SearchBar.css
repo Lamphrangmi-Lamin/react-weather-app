@@ -1,11 +1,11 @@
-div {
+form {
     display: flex;
     justify-content: center;
+    gap: .5rem;
     margin-top: .5rem;
 }
 
 input {
-    /* background-color: #3674B5; */
     width: 19rem;
     height: 2.5rem;
     border-radius: .5rem;
@@ -16,4 +16,16 @@ input {
 
 input:focus {
     outline: none;
+}
+
+/* button {
+    background-color: #fff;
+} */
+
+/* CSS */
+button {
+  padding: 4px 14px;
+  border: none;
+  border-radius: .5rem;
+  background: #fff;
 }

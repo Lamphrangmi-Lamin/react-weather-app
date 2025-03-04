@@ -32,7 +32,6 @@ function App() {
         const json = await response.json();
         setWeatherData(json);
         setIsLoading(false);
-        console.log(json);
       } catch (error) {
         setError(error);
         setIsLoading(false);
@@ -40,24 +39,19 @@ function App() {
     }
     // call fetchWeatherData
     fetchWeatherData();
+    console.log(weatherData);
 
   }, [city]) //run useEffect when city changes
 
 
   return (
-    <div>
-      <SearchBar
-        onSearch={handleSearch}
-        
-      />
-      {/* <WeatherDisplay/> */}
-      {/* <h3>Searching for city: {city}</h3> */}
-
+    <div className='app'>
+      <SearchBar className="search-bar" onSearch={handleSearch} />
       {/* conditional rendering */}
       {isLoading && <p>Loading...</p>}
       {error && <p>City not found</p>}
       {weatherData &&
-        <pre>{JSON.stringify(weatherData, null, 2)}</pre>
+        <WeatherDisplay className="weather-display" weatherData={weatherData} />
       }
     </div>
   )
